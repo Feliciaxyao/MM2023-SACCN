@@ -15,7 +15,7 @@ State Key Laboratory of Multimodal Artificial Intelligence Systems, Institute of
 
 
 ## Prerequisites
-### Environment
+### 1 Environment
 
 ```
 conda create -n samcn python=3.9
@@ -24,24 +24,22 @@ pip install -r requirements.txt
 * `requirements.txt` contains the core requirements for running the code in the `SAMCN` packages.
 NOTE: pytorch > = 1.2
 
-### Data Preparation
-#### VIOLIN dataset:
+### 2 Data Preparation
+#### a) VIOLIN dataset:
 
-We use the visual features, statements and subtitles provided by CVPR 2020 paper: [VIOLIN: A Large-Scale Dataset for Video-and-Language Inference](https://arxiv.org/pdf/2003.11618.pdf). 
-
-1. Download the visual features([C3D features](https://drive.google.com/file/d/10MQ_ceFdhtJYP3CYmm1JoBAQSmnvzv-w/view?pli=1)), [statements and subtitles](https://drive.google.com/file/d/15XS7F_En90CHnSLrRmQ0M1bqEObuqt1-/view) and unzip it under the `./dataset/violin` folder.
-
-We represent the statement and subtitles using the pretrained RoBERTa encoder provided by arXiv 2019 paper: [Roberta: A robustly optimized bert pretraining approach](https://arxiv.org/pdf/1907.11692.pdf). 
+1. We use the visual features, statements and subtitles provided by CVPR 2020 paper: [VIOLIN: A Large-Scale Dataset for Video-and-Language Inference](https://arxiv.org/pdf/2003.11618.pdf). Please download the visual features([C3D features](https://drive.google.com/file/d/10MQ_ceFdhtJYP3CYmm1JoBAQSmnvzv-w/view?pli=1)), [statements and subtitles](https://drive.google.com/file/d/15XS7F_En90CHnSLrRmQ0M1bqEObuqt1-/view) and unzip it under the `./dataset/violin` folder.
 
 
-2. Download the [pre-trained Roberta model]( https://huggingface.co/roberta-base/tree/main) and put it into the `./roberta.base` folder.
+2. We represent the statement and subtitles using the pretrained RoBERTa encoder provided by arXiv 2019 paper: [Roberta: A robustly optimized bert pretraining approach](https://arxiv.org/pdf/1907.11692.pdf). Please download the [pre-trained Roberta model]( https://huggingface.co/roberta-base/tree/main) and put it into the `./roberta.base` folder.`
+  
 
-#### VLEP dataset (TODO)
+#### b) VLEP dataset (TODO)
 
 
 
-## Training
+## Train & Test
 
+#### a) VIOLIN dataset:
 ```
 python violin_main.py --results_dir_base 'YOUR OUTPUT PATH' \
                       --feat_dir ./dataset/violin \
@@ -60,16 +58,26 @@ python violin_main.py --results_dir_base 'YOUR OUTPUT PATH' \
                       --cmcm_loss \
 ```
 
+#### b) VLEP dataset (TODO)
 
 
+## Related Work
 
-## Testing
-Download the pretrained model: [Baidu Wangpan](https://pan.baidu.com/s/1QJPWia5226Qxx5_u34434g) (pwd: 200d)
+* [VIOLIN: A Large-Scale Dataset for Video-and-Language Inference](https://arxiv.org/pdf/2003.11618.pdf)
+* [What is More Likely to Happen Next?Video-and-Language Future Event Prediction](https://arxiv.org/pdf/2010.07999.pdf)
 
-Put our provided pretrained model VIOLIN_SACCN_checkpoint.pth under the project folder, and run:
+## Citation
+
 ```
-python violin_main.py --ccl --ccl_loss --test 
+@inproceedings{Yao2023VideoEV,
+  title={Video Entailment via Reaching a Structure-Aware Cross-modal Consensus},
+  author={Xuan Yao and Junyu Gao and Mengyuan Chen and Changsheng Xu},
+  journal={Proceedings of the 31st ACM International Conference on Multimedia},
+  year={2023},
+  url={https://api.semanticscholar.org/CorpusID:264492780}
+}
 ```
+
 
 
 
