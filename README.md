@@ -61,6 +61,10 @@ python violin_main.py --results_dir_base 'YOUR OUTPUT PATH' \
 #### b) VLEP dataset (TODO)
 
 
+## Acknowledgements
+We acknowledge that the part of the video entailment code for violin dataset is adapted from [violin](https://github.com/jimmy646/violin). Thanks to the authors for sharing their code.
+
+
 ## Related Work
 
 * [VIOLIN: A Large-Scale Dataset for Video-and-Language Inference](https://arxiv.org/pdf/2003.11618.pdf)
@@ -68,6 +72,7 @@ python violin_main.py --results_dir_base 'YOUR OUTPUT PATH' \
 
 ## Citation
 
+Feel free to cite this work if you find it useful to you!
 ```
 @inproceedings{Yao2023VideoEV,
   title={Video Entailment via Reaching a Structure-Aware Cross-modal Consensus},
