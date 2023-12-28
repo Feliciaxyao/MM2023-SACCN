@@ -3,7 +3,7 @@
 
 ![image](img/SAMCN.png)
 
-Video Entailment via Reaching a Structure-Aware Cross-modal Consensus
+### Video Entailment via Reaching a Structure-Aware Cross-modal Consensus
 
 Xuan Yao, Junyu Gao, Mengyuan Chen, **Changsheng Xu***
 
